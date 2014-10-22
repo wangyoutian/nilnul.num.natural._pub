@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="BottomToTop" Layout="Sugiyama" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="(@1 @2 Type=Equal)" Category="CodeSchema_Class" Bounds="290.98,142,72.4933333333333,26" CodeSchemaProperty_IsPublic="True" IsDragSource="True" Label="Equal" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=&quot;file:///D:/WangYoutian/msn@mesh/develop/projects/nilnul.uinteger(v120330)/_relation/Equal (2).cs&quot; StartLineNumber=6 StartCharacterOffset=1 EndLineNumber=6 EndCharacterOffset=1)" />
+    <Node Id="(@1 @2 Type=EqualX)" Category="CodeSchema_Class" Bounds="0,284,80.2333333333333,26" CodeSchemaProperty_IsAbstract="True" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsPublic="True" IsDragSource="True" Label="EqualX" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=&quot;file:///D:/WangYoutian/msn@mesh/develop/projects/nilnul.uinteger(v120330)/_relation/Equal (2).cs&quot; StartLineNumber=69 StartCharacterOffset=1 EndLineNumber=69 EndCharacterOffset=1)" />
+    <Node Id="(@1 @2 Type=GreaterThanX Member=(Name=GreaterThan OverloadingParameters=[@5,(@6 Namespace=System Type=UInt32)]))" Category="CodeSchema_Method" Bounds="138.87,142,112.11,26" CodeSchemaProperty_IsExtension="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" FunctionTypeFlags="Method" IsDragSource="True" Label="GreaterThan" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=&quot;file:///D:/WangYoutian/msn@mesh/develop/projects/nilnul.uinteger(v120330)/_relation/GreaterThanX (2).cs&quot; StartLineNumber=14 StartCharacterOffset=2 EndLineNumber=14 EndCharacterOffset=2)" />
+    <Node Id="(@1 @2 Type=GreaterThanX Member=(Name=GreaterThan OverloadingParameters=[@5,@5]))" Category="CodeSchema_Method" Bounds="1.87000000000003,142,116.11,26" CodeSchemaProperty_IsExtension="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" FunctionTypeFlags="Method" IsDragSource="True" Label="GreaterThan" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=&quot;file:///D:/WangYoutian/msn@mesh/develop/projects/nilnul.uinteger(v120330)/_relation/GreaterThanX (2).cs&quot; StartLineNumber=7 StartCharacterOffset=2 EndLineNumber=7 EndCharacterOffset=2)" />
+    <Node Id="(@1 @2 Type=IsZero)" Category="CodeSchema_Class" Bounds="290.98,208,76.5433333333333,26" CodeSchemaProperty_IsPublic="True" IsDragSource="True" Label="IsZero" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=&quot;file:///D:/WangYoutian/msn@mesh/develop/projects/nilnul.uinteger(v120330)/IsZero.cs&quot; StartLineNumber=7 StartCharacterOffset=4 EndLineNumber=7 EndCharacterOffset=4)" />
+    <Node Id="(@1 @2 Type=PositiveX Member=(Name=Positive OverloadingParameters=[(@1 @2 Type=UintegerI)]))" Category="CodeSchema_Method" Bounds="109.87,0,85.4933333333333,26" CodeSchemaProperty_IsExtension="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" FunctionTypeFlags="Method" IsDragSource="True" Label="Positive" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=&quot;file:///D:/WangYoutian/msn@mesh/develop/projects/nilnul.uinteger(v120330)/_relation/PositiveX (2).cs&quot; StartLineNumber=11 StartCharacterOffset=8 EndLineNumber=11 EndCharacterOffset=8)" />
+    <Node Id="(@1 @2 Type=PositiveX Member=(Name=Positive OverloadingParameters=[@5]))" Category="CodeSchema_Method" Bounds="3.87,0,85.4933333333333,26" CodeSchemaProperty_IsExtension="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" FunctionTypeFlags="Method" IsDragSource="True" Label="Positive" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=&quot;file:///D:/WangYoutian/msn@mesh/develop/projects/nilnul.uinteger(v120330)/_relation/PositiveX (2).cs&quot; StartLineNumber=7 StartCharacterOffset=2 EndLineNumber=7 EndCharacterOffset=2)" />
+    <Node Id="@3" Category="CodeSchema_Class" Bounds="0,218,119.85,26" CodeSchemaProperty_IsAbstract="True" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsPublic="True" IsDragSource="True" Label="GreaterThanX" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=&quot;file:///D:/WangYoutian/msn@mesh/develop/projects/nilnul.uinteger(v120330)/_relation/GreaterThanX (2).cs&quot; StartLineNumber=5 StartCharacterOffset=1 EndLineNumber=5 EndCharacterOffset=1)" />
+    <Node Id="@4" Category="CodeSchema_Class" Bounds="0,76,93.2333333333333,26" CodeSchemaProperty_IsAbstract="True" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsPublic="True" IsDragSource="True" Label="PositiveX" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=&quot;file:///D:/WangYoutian/msn@mesh/develop/projects/nilnul.uinteger(v120330)/_relation/PositiveX (2).cs&quot; StartLineNumber=5 StartCharacterOffset=1 EndLineNumber=5 EndCharacterOffset=1)" />
+  </Nodes>
+  <Links>
+    <Link Source="@3" Target="(@1 @2 Type=GreaterThanX Member=(Name=GreaterThan OverloadingParameters=[@5,(@6 Namespace=System Type=UInt32)]))" Category="Contains" Bounds="83.0171051025391,172.415115356445,80.9731597900391,45.5848846435547" />
+    <Link Source="@3" Target="(@1 @2 Type=GreaterThanX Member=(Name=GreaterThan OverloadingParameters=[@5,@5]))" Category="Contains" Bounds="59.9249992370605,177,0,41" />
+    <Link Source="@4" Target="(@1 @2 Type=PositiveX Member=(Name=Positive OverloadingParameters=[(@1 @2 Type=UintegerI)]))" Category="Contains" Bounds="64.7482452392578,31.2441902160645,62.4225769042969,44.7558097839355" />
+    <Link Source="@4" Target="(@1 @2 Type=PositiveX Member=(Name=Positive OverloadingParameters=[@5]))" Category="Contains" Bounds="46.6166648864746,35,0,41" />
+  </Links>
+  <Categories>
+    <Category Id="CodeSchema_Class" Label="Class" BasedOn="CodeSchema_Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="Classes" />
+    <Category Id="CodeSchema_Member" Label="Member" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Field" NavigationActionLabel="Members" />
+    <Category Id="CodeSchema_Method" Label="Method" BasedOn="CodeSchema_Member" CanBeDataDriven="True" DefaultAction="Link:Forward:CodeSchema_Calls" Icon="CodeSchema_Method" NavigationActionLabel="Methods" />
+    <Category Id="CodeSchema_Type" Label="Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="Types" />
+    <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsAbstract" Label="Is Abstract" Description="Flag to indicate member is 'Abstract' does not provide a full implementation" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsExtension" Label="Is Extension" Description="Flag indicating if the method is an extension method" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsFinal" Label="Is Final" Description="Flag to indicate the member is 'Final' and cannot be derived from" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsPublic" Label="Is Public" Description="Flag to indicate the scope is Public" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsStatic" Label="Is Static" Description="Flag to indicate the member is a static member" DataType="System.Boolean" />
+    <Property Id="DefaultAction" Label="DefaultAction" Description="DefaultAction" DataType="System.String" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="FunctionTypeFlags" Label="FunctionTypeFlags" Description="FunctionTypeFlags" DataType="System.String" />
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Diagrams.Layout.LayeredLayoutOrientation" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="Icon" Label="Icon" Description="Icon" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsDragSource" Label="IsDragSource" Description="IsDragSource" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="Language" Label="Language" Description="Language" DataType="System.String" />
+    <Property Id="Layout" DataType="System.String" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="SourceLocation" Label="Start Line Number" DataType="Microsoft.VisualStudio.GraphModel.CodeSchema.SourceLocation" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="ValueLabel" DataType="System.String" />
+  </Properties>
+  <QualifiedNames>
+    <Name Id="Assembly" Label="Assembly" ValueType="Uri" />
+    <Name Id="Member" Label="Member" ValueType="System.Object" />
+    <Name Id="Name" Label="Name" ValueType="System.String" />
+    <Name Id="Namespace" Label="Namespace" ValueType="System.String" />
+    <Name Id="OverloadingParameters" Label="Parameter" ValueType="Microsoft.VisualStudio.GraphModel.GraphNodeIdCollection" Formatter="NameValueNoEscape" />
+    <Name Id="Type" Label="Type" ValueType="System.Object" />
+  </QualifiedNames>
+  <IdentifierAliases>
+    <Alias n="1" Uri="Assembly=$(671e6643-b7c7-4722-95b9-eb10c39bedb3.OutputPathUri)" />
+    <Alias n="2" Id="Namespace=nilnul.uinteger" />
+    <Alias n="3" Id="(@1 @2 Type=GreaterThanX)" />
+    <Alias n="4" Id="(@1 @2 Type=PositiveX)" />
+    <Alias n="5" Id="(@1 @2 Type=UintegerByBigInteger)" />
+    <Alias n="6" Uri="Assembly=$(FxReferenceAssembliesUri)/.NETFramework/v4.0/mscorlib.dll" />
+  </IdentifierAliases>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Is Abstract" ValueLabel="True">
+      <Condition Expression="CodeSchemaProperty_IsAbstract = 'True'" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Is Abstract" ValueLabel="False">
+      <Condition Expression="CodeSchemaProperty_IsAbstract = 'False'" />
+    </Style>
+  </Styles>
+  <Paths>
+    <Path Id="671e6643-b7c7-4722-95b9-eb10c39bedb3.OutputPathUri" Value="file:///D:/WangYoutian/msn@mesh/develop/projects/nilnul.uinteger(v120330)/bin/Debug/nilnul.uinteger 111230.exe" />
+    <Path Id="FxReferenceAssembliesUri" Value="file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework" />
+  </Paths>
+</DirectedGraph>

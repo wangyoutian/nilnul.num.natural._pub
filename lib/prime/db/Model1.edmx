@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CompositeCap">
+          <Key>
+            <PropertyRef Name="composite" />
+          </Key>
+          <Property Name="composite" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Prime">
+          <Key>
+            <PropertyRef Name="pi" />
+          </Key>
+          <Property Name="pi" Type="bigint" Nullable="false" />
+          <Property Name="prime" Type="bigint" Nullable="false" />
+        </EntityType>
+        <Function Name="PrimeMaxRecord" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="dbModelStoreContainer">
+          <EntitySet Name="CompositeCap" EntityType="Self.CompositeCap" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Prime" EntityType="Self.Prime" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="dbEntities" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="CompositeCap" EntityType="dbModel.CompositeCap" />
+          <EntitySet Name="Prime" EntityType="dbModel.Prime" />
+          <FunctionImport Name="PrimeMaxRecord" ReturnType="Collection(dbModel.PrimeMaxRecord_Result)" />
+        </EntityContainer>
+        <EntityType Name="CompositeCap">
+          <Key>
+            <PropertyRef Name="composite" />
+          </Key>
+          <Property Name="composite" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Prime">
+          <Key>
+            <PropertyRef Name="pi" />
+          </Key>
+          <Property Name="pi" Type="Int64" Nullable="false" />
+          <Property Name="prime1" Type="Int64" Nullable="false" />
+        </EntityType>
+        <ComplexType Name="PrimeMaxRecord_Result">
+          <Property Type="Int64" Name="pi" Nullable="true" />
+          <Property Type="Int64" Name="prime" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dbModelStoreContainer" CdmEntityContainer="dbEntities" >
+          <EntitySetMapping Name="CompositeCap">
+            <EntityTypeMapping TypeName="dbModel.CompositeCap">
+              <MappingFragment StoreEntitySet="CompositeCap">
+                <ScalarProperty Name="composite" ColumnName="composite" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Prime">
+            <EntityTypeMapping TypeName="dbModel.Prime">
+              <MappingFragment StoreEntitySet="Prime">
+                <ScalarProperty Name="prime1" ColumnName="prime" />
+                <ScalarProperty Name="pi" ColumnName="pi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="PrimeMaxRecord" FunctionName="dbModel.Store.PrimeMaxRecord">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dbModel.PrimeMaxRecord_Result">
+                <ScalarProperty Name="pi" ColumnName="pi" />
+                <ScalarProperty Name="prime" ColumnName="prime" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

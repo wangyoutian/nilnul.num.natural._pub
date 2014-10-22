@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PrimeModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="PrimeModelStoreContainer">
+          <EntitySet Name="Prime" EntityType="PrimeModel.Store.Prime" store:Type="Tables" Schema="nilnul.num.natural" />
+          <EntitySet Name="Prime_CompositeUpperBound" EntityType="PrimeModel.Store.Prime_CompositeUpperBound" store:Type="Tables" Schema="nilnul.num.natural" Table="Prime.CompositeUpperBound" />
+        </EntityContainer>
+        <EntityType Name="Prime">
+          <Key>
+            <PropertyRef Name="sn" />
+          </Key>
+          <Property Name="sn" Type="bigint" Nullable="false" />
+          <Property Name="num" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Prime_CompositeUpperBound">
+          <Key>
+            <PropertyRef Name="Val" />
+          </Key>
+          <Property Name="Val" Type="bigint" Nullable="false" />
+        </EntityType>
+        <Function Name="Prime_CompositeUpperBoundFunc" ReturnType="bigint" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" StoreFunctionName="Prime.CompositeUpperBoundFunc" Schema="nilnul.num.natural" />
+        <Function Name="Prime_MaxPrimeFunc" ReturnType="bigint" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" StoreFunctionName="Prime.MaxPrimeFunc" Schema="nilnul.num.natural" />
+        <Function Name="PrimeMaxRecord" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="nilnul.num.natural" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PrimeModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="PrimeEntities2" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Prime" EntityType="PrimeModel.Prime" />
+          <EntitySet Name="Prime_CompositeUpperBound" EntityType="PrimeModel.Prime_CompositeUpperBound" />
+          <FunctionImport Name="PrimeMaxRecord" ReturnType="Collection(PrimeModel.PrimeMaxRecord_Result)" />
+        </EntityContainer>
+        <EntityType Name="Prime">
+          <Key>
+            <PropertyRef Name="sn" />
+          </Key>
+          <Property Name="sn" Type="Int64" Nullable="false" />
+          <Property Name="num" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Prime_CompositeUpperBound">
+          <Key>
+            <PropertyRef Name="Val" />
+          </Key>
+          <Property Name="Val" Type="Int64" Nullable="false" />
+        </EntityType>
+        <ComplexType Name="PrimeMaxRecord_Result">
+          <Property Type="Int64" Name="sn" Nullable="true" />
+          <Property Type="Int64" Name="num" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PrimeModelStoreContainer" CdmEntityContainer="PrimeEntities2">
+          <EntitySetMapping Name="Prime">
+            <EntityTypeMapping TypeName="PrimeModel.Prime">
+              <MappingFragment StoreEntitySet="Prime">
+                <ScalarProperty Name="sn" ColumnName="sn" />
+                <ScalarProperty Name="num" ColumnName="num" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Prime_CompositeUpperBound">
+            <EntityTypeMapping TypeName="PrimeModel.Prime_CompositeUpperBound">
+              <MappingFragment StoreEntitySet="Prime_CompositeUpperBound">
+                <ScalarProperty Name="Val" ColumnName="Val" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="PrimeMaxRecord" FunctionName="PrimeModel.Store.PrimeMaxRecord">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PrimeModel.PrimeMaxRecord_Result">
+                <ScalarProperty Name="sn" ColumnName="sn" />
+                <ScalarProperty Name="num" ColumnName="num" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams />
+  </Designer>
+</edmx:Edmx>

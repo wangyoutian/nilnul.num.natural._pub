@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E4AC66BE-7995-4581-85E4-38D4E1C3E79F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>nilnul.num.natural</RootNamespace>
+    <AssemblyName>nilnul.num.natural</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="be\Positive.cs" />
+    <Compile Include="be\plural.bigint\Asserted.cs" />
+    <Compile Include="be\plural.bigint\asserted\Ten.cs" />
+    <Compile Include="be\plural.bigint\asserted\Hex.cs" />
+    <Compile Include="be\plural.bigint\asserted\Oct.cs" />
+    <Compile Include="be\plural.bigint\Two.cs" />
+    <Compile Include="be\Plural.cs" />
+    <Compile Include="be\plural.bigint\asserted\Two.cs" />
+    <Compile Include="be\plural\Two.cs" />
+    <Compile Include="bigint\rel\Plural.cs" />
+    <Compile Include="collection\Bag%28TKey.cs" />
+    <Compile Include="collection\Bag%28TKey,TEq.cs" />
+    <Compile Include="collection\Dict%28T.cs" />
+    <Compile Include="collection\Dict%28T,TEqual.cs" />
+    <Compile Include="collection\Interval.cs" />
+    <Compile Include="collection\Set.cs" />
+    <Compile Include="Composite.cs" />
+    <Compile Include="encoding\FixedLen.cs" />
+    <Compile Include="ExprI1.cs" />
+    <Compile Include="ExprI.cs" />
+    <Compile Include="expr\Abstract.cs" />
+    <Compile Include="func\DoubleFactorial.cs" />
+    <Compile Include="InfiniteI.cs" />
+    <Compile Include="IntervalI.cs" />
+    <Compile Include="interval\OpenClose.cs" />
+    <Compile Include="interval\Close.cs" />
+    <Compile Include="interval\LeftCloseToRightInf.cs" />
+    <Compile Include="interval\LeftOpenToRightInf.cs" />
+    <Compile Include="interval\Open.cs" />
+    <Compile Include="interval\Clopen.cs" />
+    <Compile Include="NaturalI1.cs" />
+    <Compile Include="op\DivRem.cs" />
+    <Compile Include="op\Sigma.cs" />
+    <Compile Include="op\Sum.cs" />
+    <Compile Include="op\Pow.cs" />
+    <Compile Include="op\Unary.cs" />
+    <Compile Include="op\Binary.cs" />
+    <Compile Include="op\UnaryI.cs" />
+    <Compile Include="op\BinaryI.cs" />
+    <Compile Include="op\Add1.cs" />
+    <Compile Include="op\binary\Expr.cs" />
+    <Compile Include="op\binary\Const.cs" />
+    <Compile Include="op\ExprI.cs" />
+    <Compile Include="op\ConstI.cs" />
+    <Compile Include="op\DoubleFactorial.cs" />
+    <Compile Include="op\Factorial %283%29.cs" />
+    <Compile Include="func\PowerOfTwo.cs" />
+    <Compile Include="matrix\Identity.cs" />
+    <Compile Include="matrix\Multiply.cs" />
+    <Compile Include="matrix\PowerX.cs" />
+    <Compile Include="Million.cs" />
+    <Compile Include="Myriad.cs" />
+    <Compile Include="op\Combinate.cs" />
+    <Compile Include="op\Permutate.cs" />
+    <Compile Include="op\Successor.cs" />
+    <Compile Include="op\Multiply2.cs" />
+    <Compile Include="op\Pentation.cs" />
+    <Compile Include="op\Substract %286%29.cs" />
+    <Compile Include="op\PowX2.cs" />
+    <Compile Include="op\Tetration.cs" />
+    <Compile Include="op\ToStr.cs" />
+    <Compile Include="op\unary\Const.cs" />
+    <Compile Include="op\unary\Expr.cs" />
+    <Compile Include="ord\WellOrderI.cs" />
+    <Compile Include="ParseX.cs" />
+    <Compile Include="Prime3.cs" />
+    <Compile Include="Prime2.cs" />
+    <Compile Include="Plural2.cs" />
+    <Compile Include="Natural_bigInteger.cs" />
+    <Compile Include="EulerTotient.cs" />
+    <Compile Include="ExtendedGcd.cs" />
+    <Compile Include="ExtendedI.cs" />
+    <Compile Include="ExtendedNaturalI.cs" />
+    <Compile Include="Gcd.cs" />
+    <Compile Include="HexDigits.cs" />
+    <Compile Include="HexDigits__ByList.cs" />
+    <Compile Include="Infinite.cs" />
+    <Compile Include="IsZero.cs" />
+    <Compile Include="LessThan.cs" />
+    <Compile Include="Natural2.cs" />
+    <Compile Include="NaturalX.cs" />
+    <Compile Include="op\DivideX.cs" />
+    <Compile Include="op\Multiply %282%29.cs" />
+    <Compile Include="op\MultiplyI %283%29.cs" />
+    <Compile Include="op\MultiplyX.cs" />
+    <Compile Include="op\Product.cs" />
+    <Compile Include="Plural.cs" />
+    <Compile Include="PluralX.cs" />
+    <Compile Include="Prime.cs" />
+    <Compile Include="prime\Bag.cs" />
+    <Compile Include="prime\conn\Conn.cs" />
+    <Compile Include="prime\Coprime.cs" />
+    <Compile Include="prime\conn\Adapter.cs" />
+    <Compile Include="prime\Db.cs" />
+    <Compile Include="prime\db\CompositeCap.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="prime\db\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="prime\db\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="prime\db\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="prime\db\Model2.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model2.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="prime\db\Model2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="prime\db\Model2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model2.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="prime\db\Prime.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="prime\db\PrimeMaxRecord_Result.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="prime\db\sp_PrimeMaxRecord_Result.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="prime\Set.cs" />
+    <Compile Include="prime\SetX2.cs" />
+    <Compile Include="prime\EulerTotientTheorem.cs" />
+    <Compile Include="Factoring.cs" />
+    <Compile Include="prime\PairwiseCoprime.cs" />
+    <Compile Include="prime\PrimeDecomposition.cs" />
+    <Compile Include="prime\Totient.cs" />
+    <Compile Include="PrimitiveRoot.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Radix.cs" />
+    <Compile Include="radix\Binary.cs" />
+    <Compile Include="RefI.cs" />
+    <Compile Include="relation\Equal %282%29.cs" />
+    <Compile Include="relation\GreaterThanX %282%29.cs" />
+    <Compile Include="relation\PositiveX %282%29.cs" />
+    <Compile Include="Rel.cs" />
+    <Compile Include="RelI.cs" />
+    <Compile Include="rel\Const.cs" />
+    <Compile Include="rel\Expr.cs" />
+    <Compile Include="rel\ExprI.cs" />
+    <Compile Include="rel\ConstI.cs" />
+    <Compile Include="rel\Eq.cs" />
+    <Compile Include="rel\Plural.cs" />
+    <Compile Include="sequence\Fibonacci%28140403.cs" />
+    <Compile Include="set\SumX.cs" />
+    <Compile Include="Sign.cs" />
+    <Compile Include="SquareFree.cs" />
+    <Compile Include="str\Squared.cs" />
+    <Compile Include="theorems\Eq.cs" />
+    <Compile Include="Literal.cs" />
+    <Compile Include="Var1.cs" />
+    <Compile Include="Var.cs" />
+    <Compile Include="VarI.cs" />
+    <Compile Include="_1\Natural%28instance.cs" />
+    <Compile Include="_1\NaturalX.cs" />
+    <Compile Include="_expr\PositiveNatural_inheritNatural2.cs" />
+    <Compile Include="_expr\PositiveNatural_inheritNatural.cs" />
+    <Compile Include="_expr\PositiveNatural3.cs" />
+    <Compile Include="_expr\Count.cs" />
+    <Compile Include="_expr\NaturalBigint.cs" />
+    <Compile Include="NaturalI%280.cs" />
+    <Compile Include="_expr\PositiveIntegerByAxiom.cs" />
+    <Compile Include="_expr\PositiveIntegerI.cs" />
+    <Compile Include="_expr\PositiveNatural.cs" />
+    <Compile Include="_expr\PositiveNatural2.cs" />
+    <Compile Include="_expr\PositiveNaturalI.cs" />
+    <Compile Include="_expr\PositiveX.cs" />
+    <Compile Include="_expr\Uinteger.cs" />
+    <Compile Include="_expr\UintegerI.cs" />
+    <Compile Include="_expr\ZeroX.cs" />
+    <Compile Include="_op.closed.bi\Add.cs" />
+    <Compile Include="op\PowX.cs" />
+    <Compile Include="_op.closed.bi\Divide.cs" />
+    <Compile Include="_op.closed.bi\Pow.cs" />
+    <Compile Include="_op.closed.bi\Root.cs" />
+    <Compile Include="_op.closed.bi\Substract %286%29.cs" />
+    <Compile Include="_op.closed.bi\SubtractNegativeException %282%29.cs" />
+    <Compile Include="op\Add.cs" />
+    <Compile Include="_op.closed.unary\Ceiling %282%29.cs" />
+    <Compile Include="_op.closed.unary\Floor %287%29.cs" />
+    <Compile Include="_op.closed.unary\Lg.cs" />
+    <Compile Include="_op.closed.unary\Log2Floor.cs" />
+    <Compile Include="_op.closed.unary\Modulo.cs" />
+    <Compile Include="_op.closed.unary\Remainder.cs" />
+    <Compile Include="_op.closed.unary\Sqrt.cs" />
+    <Compile Include="_op.closed.unary\SqrtFloor.cs" />
+    <Compile Include="_\Natural%28instance.cs" />
+    <Compile Include="__bigint\be\Natural.cs" />
+    <Compile Include="__bigint\be\Positive.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="AssemblyDependencies1.dgml" />
+    <None Include="expr.cd" />
+    <None Include="OpDependency.dgml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <EntityDeploy Include="prime\db\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="prime\db\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </None>
+    <None Include="prime\db\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="prime\db\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="prime\db\Model2.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model2.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="prime\db\Model2.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model2.edmx</DependentUpon>
+      <LastGenOutput>Model2.Context.cs</LastGenOutput>
+    </None>
+    <None Include="prime\db\Model2.edmx.diagram">
+      <DependentUpon>Model2.edmx</DependentUpon>
+    </None>
+    <None Include="prime\db\Model2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model2.edmx</DependentUpon>
+      <LastGenOutput>Model2.cs</LastGenOutput>
+    </None>
+    <None Include="SequenceDiagram1.sequencediagram" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="prime\db.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="prime\db_log.ldf">
+      <DependentUpon>db.mdf</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Radical.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SequenceDiagram1.sequencediagram.layout">
+      <DependentUpon>SequenceDiagram1.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="adj\" />
+    <Folder Include="be\plural\bigint\" />
+    <Folder Include="expr\op\" />
+    <Folder Include="prime\db.conn\" />
+    <Folder Include="prime\NewFolder1\" />
+    <Folder Include="radix\Binary\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\nilnul%28130115\lib\nilnul%28130621.csproj">
+      <Project>{781321c7-7737-4b1f-ba13-048169502805}</Project>
+      <Name>nilnul%28130621</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\nilnul.bit%28sln\lib\nilnul.bit130616.csproj">
+      <Project>{109c1344-5bea-4e1a-b662-2c7fe60ac428}</Project>
+      <Name>nilnul.bit130616</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\nilnul.collection.set\lib\nilnul.collection.set130710.csproj">
+      <Project>{2aa0c2e4-554d-4e03-bb2d-9325def32ad0}</Project>
+      <Name>nilnul.collection.set130710</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\nilnul.collection\lib\nilnul.collection%28131218.csproj">
+      <Project>{8a90ee69-6c6d-46a9-b344-04111ebd0172}</Project>
+      <Name>nilnul.collection%28131218</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\nilnul.obj\lib\nilnul.obj.csproj">
+      <Project>{9807479b-f797-4a18-9feb-0cc576c27308}</Project>
+      <Name>nilnul.obj</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\nilnul.order\lib\nilnul.order%28131219withInterval.csproj">
+      <Project>{63759cd3-6172-4308-b978-3563645f858e}</Project>
+      <Name>nilnul.order%28131219withInterval</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

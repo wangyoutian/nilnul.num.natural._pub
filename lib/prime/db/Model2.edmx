@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="nilnul3Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Prime">
+          <Key>
+            <PropertyRef Name="pi" />
+          </Key>
+          <Property Name="pi" Type="bigint" Nullable="false" />
+          <Property Name="prime" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CompositeCap">
+          <Key>
+            <PropertyRef Name="composite" />
+          </Key>
+          <Property Name="composite" Type="bigint" Nullable="false" />
+        </EntityType>
+        <Function Name="fn_CompositeCap" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="nilnul.num.n.prime" ReturnType="bigint" />
+        <Function Name="fn_MaxPrime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="nilnul.num.n.prime" ReturnType="bigint" />
+        <Function Name="sp_PrimeMaxRecord" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="nilnul.num.n.prime" />
+        <EntityContainer Name="nilnul3ModelStoreContainer">
+          <EntitySet Name="Prime" EntityType="Self.Prime" Schema="nilnul.num.n" store:Type="Tables" />
+          <EntitySet Name="CompositeCap" EntityType="Self.CompositeCap" Schema="nilnul.num.n.prime" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="nilnul3Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Prime">
+          <Key>
+            <PropertyRef Name="pi" />
+          </Key>
+          <Property Name="pi" Type="Int64" Nullable="false" />
+          <Property Name="prime1" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CompositeCap">
+          <Key>
+            <PropertyRef Name="composite" />
+          </Key>
+          <Property Name="composite" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="nilnul3Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Prime" EntityType="Self.Prime" />
+          <EntitySet Name="CompositeCap" EntityType="Self.CompositeCap" />
+          <FunctionImport Name="sp_PrimeMaxRecord" ReturnType="Collection(nilnul3Model.sp_PrimeMaxRecord_Result)" />
+        </EntityContainer>
+        <ComplexType Name="PrimeMaxRecord_Result">
+          <Property Type="Int64" Name="pi" Nullable="true" />
+          <Property Type="Int64" Name="prime" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_PrimeMaxRecord_Result">
+          <Property Type="Int64" Name="pi" Nullable="true" />
+          <Property Type="Int64" Name="prime" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="nilnul3ModelStoreContainer" CdmEntityContainer="nilnul3Entities">
+          <EntitySetMapping Name="Prime">
+            <EntityTypeMapping TypeName="nilnul3Model.Prime">
+              <MappingFragment StoreEntitySet="Prime">
+                <ScalarProperty Name="pi" ColumnName="pi" />
+                <ScalarProperty Name="prime1" ColumnName="prime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CompositeCap">
+            <EntityTypeMapping TypeName="nilnul3Model.CompositeCap">
+              <MappingFragment StoreEntitySet="CompositeCap">
+                <ScalarProperty Name="composite" ColumnName="composite" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_PrimeMaxRecord" FunctionName="nilnul3Model.Store.sp_PrimeMaxRecord">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="nilnul3Model.sp_PrimeMaxRecord_Result">
+                <ScalarProperty Name="pi" ColumnName="pi" />
+                <ScalarProperty Name="prime" ColumnName="prime" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
